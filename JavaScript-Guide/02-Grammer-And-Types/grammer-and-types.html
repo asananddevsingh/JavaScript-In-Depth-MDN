@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grammer and Types</title>
+    <!--JavaScript is case-sensitive and uses the Unicode character set.-->
+    <script>
+        /******** SECTION 1 *********/
+        /*An attempt to access an undeclared variable will result in a ReferenceError exception being thrown:*/
+        console.log('/******** SECTION 1 *********/');
+        (function () {
+            try {
+                var a;
+                console.log("The value of a is " + a); // logs "The value of a is undefined"
+                console.log("The value of b is " + b); // throws ReferenceError exception
+            } catch (err) {
+                console.log('There is Error: 001');
+            }
+        })();
+
+        /******** SECTION 2 *********/
+        /*You can use undefined to determine whether a variable has a value. In the following code, the variable input is not assigned a value, and the if statement evaluates to true.*/
+        console.log('/******** SECTION 2 *********/');
+        (function () {
+            var input;
+            if (input === undefined) {
+                console.log('Input is, ', input)
+            } else {
+                console.log('Input is defined.')
+            }
+        })();
+
+        /******** SECTION 3 *********/
+        /*The undefined value behaves as false when used in a boolean context. For example, the following code executes the function myFunction because the myArray element is undefined:*/
+        console.log('/******** SECTION 3 *********/');
+        (function () {
+            var myArray = [];
+            if (myArray[0]) {
+                console.log('Array is truthy');
+            } else {
+                console.log('Array is falsy');
+            }
+        })();
+
+        /******** SECTION 4 *********/
+        /*The undefined value converts to NaN when used in numeric context:*/
+        console.log('/******** SECTION 4 *********/');
+        (function () {
+            var a;
+            console.log('a + 2 = ', a + 2); // Evaluates to NaN
+        })();
+
+        /******** SECTION 5 *********/
+        /*When you evaluate a null variable, the null value behaves as 0 in numeric contexts and as false in boolean contexts. For example:*/
+        console.log('/******** SECTION 5 *********/');
+        (function () {
+            var n = null;
+            console.log('n * 32 = ', n * 32, '"here n is null", '); // Will log 0 to the console
+        })();
+
+        /******** SECTION 6 *********/
+        /*        Variable scope
+
+        When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
+
+        JavaScript before ECMAScript 6 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.*/
+        console.log('/******** SECTION 6 *********/');
+
+        (function () {
+            if (true) {
+                var x = 5;
+            }
+            console.log('X defined in true block will take the scope of funtion and its value is = ', x); // 5
+
+            //This behavior changes, when using the let declaration introduced in ECMAScript 6.
+            if (true) {
+                let y = 5;
+            }
+            //console.log(y); // ReferenceError: y is not defined
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>Please see the console log to understand the code results.</h1>
+</body>
+
+</html>
