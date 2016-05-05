@@ -79,6 +79,16 @@
             }
             //console.log(y); // ReferenceError: y is not defined
         })();
+
+        /* * * * * * * * SECTION 7 * * * * * * * * * /
+        /*       Variable hoisting
+
+        Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception. This concept is known as hoisting; variables in JavaScript are in a sense "hoisted" or lifted to the top of the function or statement. However, variables that are hoisted will return a value of undefined. So even if you declare and initialize after you use or refer to this variable, it will still return undefined.*/
+        console.log('/******** SECTION 7 *********/');
+        (function () {
+            console.log(x === undefined); // true
+            var x = 3;
+        })();
     </script>
 </head>
 
