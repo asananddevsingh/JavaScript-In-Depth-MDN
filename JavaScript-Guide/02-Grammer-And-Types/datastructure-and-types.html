@@ -5,17 +5,64 @@
     <meta charset="UTF-8">
     <title>Datastructure and types</title>
     <script>
+        /* Lest prove the primitive types */
+        (function () {
 
-        (function(){
+            console.log('\n****** Primitive data types ******');
+            var num = new Number();
+            console.log("This is default primitive value for: ", num);
+
+            var str = new String();
+            console.log("This is default primitive value for: ", str);
+
+            var bool = new Boolean();
+            console.log("This is default primitive value for: ", bool);
+
+            var sym = Symbol('this is symbol');
+            console.log("Symbol is: ", sym);
+
+            console.log('\n****** Composite Data Types ******');
+            var obj = new Object();
+            console.log("new Object() is: ", obj);
+
+            var fun = new Function();
+            console.log("new Function() is: ", fun);
+
+            console.log('\n****** Special Data Types ******');
+            var und = undefined;
+            console.log("undefined is: ", und);
 
         })();
-
     </script>
 </head>
 
 <body>
     <h1>Data structures and types</h1>
     <h3>Please see the console log for the code results.</h3>
+
+
+    <h2>Primary Data Types</h2>
+    <p>The primary (primitive) data types are:</p>
+    <ul>
+        <li>String</li>
+        <li>Number</li>
+        <li>Boolean</li>
+        <li>Symbol</li>
+    </ul>
+
+    <p><strong>Note: Symbol is new data type in ECMAScript 6</strong></p>
+    <h2>Composite Data Types</h2>
+    <p>The composite (reference) data types are:</p>
+    <ul>
+        <li>Object</li>
+        <li>Array</li>
+    </ul>
+    <h2>Special Data Types</h2>
+    <p>The special data types are:</p>
+    <ul>
+        <li>Null</li>
+        <li>Undefined</li>
+    </ul>
 </body>
 
 </html>
