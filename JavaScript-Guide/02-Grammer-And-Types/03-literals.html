@@ -25,6 +25,18 @@
         /* Boolean literals */
         (function(){
 
+            var b1 = true;
+            b1.prop = 'This is primitive';
+
+            console.log('Value of b1.prop is, ', b1.prop);
+
+            //where as
+
+            var b2 = new Object('any expression');
+
+            b2.prop = 'This is Boolean literal';
+            console.log('Value of b2.prop is, ', b2.prop);
+
         }());
 
     </script>
