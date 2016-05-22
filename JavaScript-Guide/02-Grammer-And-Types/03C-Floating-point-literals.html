@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Floating-point literals</title>
-
 </head>
+
 <body>
-    <h4>Floating-point literals</h4>
+
+    <p><b>Integers</b>
+        <br> Integers can be expressed in decimal (base 10), hexadecimal (base 16), octal (base 8) and binary (base 2).</p>
+    <ul>
+        <li>Decimal integer literal consists of a sequence of digits without a leading 0 (zero).</li>
+        <li>Leading 0 (zero) on an integer literal, or leading 0o (or 0O) indicates it is in octal. Octal integers can include only the digits 0-7.</li>
+        <li>Leading 0x (or 0X) indicates hexadecimal. Hexadecimal integers can include digits (0-9) and the letters a-f and A-F.</li>
+        <li>
+            <p>Leading 0b (or 0B) indicates&nbsp;binary. Binary integers can include digits only 0 and 1.</p>
+        </li>
+    </ul>
+    <b>Example</b>
+    <ol>
+        <li>0, 117 and -345 (decimal, base 10)</li>
+        <li>015, 0001 and -0o77 (octal, base 8) </li>
+        <li>0x1123, 0x00111 and -0xF1A7 (hexadecimal, "hex" or base 16)</li>
+        <li>0b11, 0b0011 and -0b11 (binary, base 2)</li>
+    </ol>
+    <hr>
+    <h3>Floating-point literals</h3>
+    <p>A floating-point literal can have the following parts:</p>
+
+    <ul>
+        <li>A decimal integer which can be signed (preceded by "+" or "-"),</li>
+        <li>A decimal point ("."),</li>
+        <li>A fraction (another decimal number),</li>
+        <li>An exponent.</li>
+    </ul>
+    <p>The exponent part is an "e" or "E" followed by an integer, which can be signed (preceded by "+" or "-"). A floating-point literal must have at least one digit and either a decimal point or "e" (or "E").</p>
+    <p>More succinctly, the syntax is:
+        <br> [(+|-)][digits][.digits][(E|e)[(+|-)]digits]
+
+    </p>
+    <b>Example:</b>
+    <ul>
+        <li>3.1415926</li>
+        <li>-.123456789</li>
+        <li>-3.1E+12</li>
+        <li>.1e-23</li>
+    </ul>
 </body>
+
 </html>
