@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>String literals</title>
+
+    <script>
+        (function () {
+            // Basic literal string creation
+            `In JavaScript '\n' is a line-feed.`
+
+            // Multiline strings
+            /*`In JavaScript this is
+                not legal.`*/
+
+            // String interpolation
+            var name = "Bob",
+                time = "today";
+            console.log(`Hello ${name}, how are you ${time}?`);
+        }())
+    </script>
+</head>
+
+<body>
+    <h3>String literals</h3>
+    <p>
+        A string literal is zero or more characters enclosed in double (") or single (') quotation marks. A string must be delimited by quotation marks of the same type; that is, either both single quotation marks or both double quotation marks. The following are examples of string literals:</p>
+    <ul>
+        <li>"foo"</li>
+        <li>'bar'</li>
+        <li>"1234"</li>
+        <li>"one line \n another line"</li>
+        <li>"John's cat"</li>
+
+    </ul>
+    <hr>
+    <h3><caption>Table: JavaScript special characters</caption></h3>
+    <table class="standard-table">
+        <thead>
+            <tr>
+                <th scope="col">Character</th>
+                <th style="text-align:left;">Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>\0</code></td>
+                <td>Null Byte</td>
+            </tr>
+            <tr>
+                <td><code>\b</code></td>
+                <td>Backspace</td>
+            </tr>
+            <tr>
+                <td><code>\f</code></td>
+                <td>Form feed</td>
+            </tr>
+            <tr>
+                <td><code>\n</code></td>
+                <td>New line</td>
+            </tr>
+            <tr>
+                <td><code>\r</code></td>
+                <td>Carriage return</td>
+            </tr>
+            <tr>
+                <td><code>\t</code></td>
+                <td>Tab</td>
+            </tr>
+            <tr>
+                <td><code>\v</code></td>
+                <td>Vertical tab</td>
+            </tr>
+            <tr>
+                <td><code>\'</code></td>
+                <td>Apostrophe or single quote</td>
+            </tr>
+            <tr>
+                <td><code>\"</code></td>
+                <td>Double quote</td>
+            </tr>
+            <tr>
+                <td><code>\\</code></td>
+                <td>Backslash character</td>
+            </tr>
+            <tr>
+                <td><code>\<em>XXX</em></code></td>
+                <td>The character with the Latin-1 encoding specified by up to three octal digits <em>XXX</em> between 0 and 377. For example, \251 is the octal sequence for the copyright symbol.</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td><code>\x<em>XX</em></code></td>
+                <td>The character with the Latin-1 encoding specified by the two hexadecimal digits <em>XX</em> between 00 and FF. For example, \xA9 is the hexadecimal sequence for the copyright symbol.</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td><code>\u<em>XXXX</em></code></td>
+                <td>The Unicode character specified by the four hexadecimal digits <em>XXXX</em>. For example, \u00A9 is the Unicode sequence for the copyright symbol. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a>.</td>
+            </tr>
+            <tr>
+                <td><code>\u<em>{XXXXX}</em></code></td>
+                <td>Unicode code point escapes. For example, \u{2F804} is the same as the simple Unicode escapes \uD87E\uDC04.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
