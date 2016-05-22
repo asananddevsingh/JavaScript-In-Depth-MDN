@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boolean literals</title>
+    <script>
+        /* Boolean literals */
+        (function () {
+
+            // Primitive Boolean values i.e. true and false.
+            var b1 = true;
+            b1.prop = 'This is primitive'; // We can NOT add properties.
+
+            console.log('Value of b1.prop is, ', b1.prop);
+
+            // where as by using Boolean constructor function:
+            var b2 = new Boolean('any expression');
+
+            b2.prop = 'This is Boolean literal'; // We can add properties also.
+            console.log('Primitive value of b2 is ', b2.valueOf()); // To access the primitive value of boolean object, we use valueOf() method.
+            console.log('Value of b2.prop is, ', b2.prop);
+
+        }());
+
+    </script>
+</head>
+<body>
+    <h4>Boolean literals</h4>
+    <p></p>
+    <p>To access the primitive value of boolean object, we use valueOf() method.</p>
+</body>
+</html>

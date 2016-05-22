@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array literals</title>
+    <script>
+        /* Array literals */
+        (function () {
+            console.log('Array literals');
+            var coffees = ["French Roast", "Colombian", "Kona"];
+            console.log(coffees);
+
+            var myList = [, 'home', , 'school'];
+            console.log(myList);
+
+            var myList = ['home', , 'school', , ];
+            console.log(myList, 'Length = ', myList.length);
+
+            var myList = ['home', , 'school', , , 'Park', , , ];
+            console.log(myList, 'Length = ', myList.length);
+
+        }());
+    </script>
+</head>
+
+<body>
+    <h4>Array literals</h4>
+</body>
+
+</html>

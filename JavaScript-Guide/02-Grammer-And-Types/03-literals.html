@@ -4,42 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Literals</title>
-    <script>
-        /* Array literals */
-        (function () {
-            console.log('Array literals');
-            var coffees = ["French Roast", "Colombian", "Kona"];
-            console.log(coffees);
-
-            var myList = [, 'home', , 'school'];
-            console.log(myList);
-
-            var myList = ['home', , 'school', , ];
-            console.log(myList, 'Length = ', myList.length);
-
-            var myList = ['home', , 'school', , , 'Park', , , ];
-            console.log(myList, 'Length = ', myList.length);
-
-        }());
-
-        /* Boolean literals */
-        (function () {
-
-            // Primitive Boolean values i.e. true and false.
-            var b1 = true;
-            b1.prop = 'This is primitive'; // We can NOT add properties.
-
-            console.log('Value of b1.prop is, ', b1.prop);
-
-            //where as by using Boolean constructor function:
-            var b2 = new Boolean('any expression');
-
-            b2.prop = 'This is Boolean literal'; // We can add properties also.
-            console.log('Primitive value of b2 is ', b2.valueOf()); // To access the primitive value of boolean object, we use valueOf() method.
-            console.log('Value of b2.prop is, ', b2.prop);
-
-        }());
-    </script>
 </head>
 
 <body>
