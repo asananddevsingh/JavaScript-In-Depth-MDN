@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Literals</title>
     <script>
-
         /* Array literals */
-        (function(){
+        (function () {
             console.log('Array literals');
             var coffees = ["French Roast", "Colombian", "Kona"];
             console.log(coffees);
 
-            var myList = [ , 'home', , 'school'];
+            var myList = [, 'home', , 'school'];
             console.log(myList);
 
             var myList = ['home', , 'school', , ];
@@ -19,28 +19,29 @@
 
             var myList = ['home', , 'school', , , 'Park', , , ];
             console.log(myList, 'Length = ', myList.length);
-            
+
         }());
 
         /* Boolean literals */
-        (function(){
+        (function () {
 
+            // Primitive Boolean values i.e. true and false.
             var b1 = true;
-            b1.prop = 'This is primitive';
+            b1.prop = 'This is primitive'; // We can NOT add properties.
 
             console.log('Value of b1.prop is, ', b1.prop);
 
-            //where as
+            //where as by using Boolean constructor function:
+            var b2 = new Boolean('any expression');
 
-            var b2 = new Object('any expression');
-
-            b2.prop = 'This is Boolean literal';
+            b2.prop = 'This is Boolean literal'; // We can add properties also.
+            console.log('Primitive value of b2 is ', b2.valueOf());
             console.log('Value of b2.prop is, ', b2.prop);
 
         }());
-
     </script>
 </head>
+
 <body>
     <h2>Literals</h2>
     <p>You use literals to represent values in JavaScript. These are fixed values, not variables, that you literally provide in your script. This section describes the following types of literals:</p>
@@ -55,4 +56,5 @@
         <li>String literals</li>
     </ul>
 </body>
+
 </html>
