@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conditinal statements</title>
+
+    <script>
+        (function () {
+            console.log('Block statement');
+            var x = 1;
+            while (x < 3) {
+                console.log(x);
+                x++;
+            }
+
+            /*Conditional statements*/
+            if (true) {
+                console.log('Conditional statements is true');
+            } else {
+                console.log('Conditional statements is false');
+            }
+            /**/
+            console.log("Switch statement");
+            var fruittype = 'Mangoes';
+            switch (fruittype) {
+            case "Apples":
+                console.log("Apples are $0.32 a pound.");
+                break;
+            case "Bananas":
+                console.log("Bananas are $0.48 a pound.");
+                break;
+            case "Mangoes":
+                console.log("Mangoes are $0.56 a pound.");
+                break;
+            default:
+                console.log("Sorry, we are out of " + fruittype + ".");
+            }
+            /*Try - catch statement*/
+            (function () {
+                try {
+                    console.log('Error will be locked');
+                    throw "myException"; // generates an exception
+                } catch (e) {
+                    // statements to handle any exceptions
+                    console.error('My erros in function: ', e);
+                } finally {
+                    console.log('finally block is executed.')
+                }
+            }())
+        }())
+    </script>
+</head>
+
+<body>
+    <h3>Block statement</h3>
+    <p>The most basic statement is a block statement that is used to group statements. The block is delimited by a pair of curly brackets:</p>
+    <hr>
+    <h3>Conditional statements</h3>
+    <p>A conditional statement is a set of commands that executes if a specified condition is true. JavaScript supports two conditional statements: if...else and switch.</p>
+    <hr>
+    <h3>Falsy values</h3>
+    <p>The following values evaluate to false (also known as Falsy values):</p>
+    <ul>
+        <li><code>false</code></li>
+        <li><code>undefined</code></li>
+        <li><code>null</code></li>
+        <li><code>0</code></li>
+        <li><code>NaN</code></li>
+        <li>the empty string (<code>""</code>)</li>
+    </ul>
+    <hr>
+    <h3>switch statement</h3>
+    <p>A switch statement allows a program to evaluate an expression and attempt to match the expression's value to a case label. If a match is found, the program executes the associated statement.</p>
+    <hr>
+    <h3>try...catch...finally statement</h3>
+    <p>The try...catch statement marks a block of statements to try, and specifies one or more responses should an exception be thrown. If an exception is thrown, the try...catch statement catches it.</p>
+    <p>finally block is guaranteed to executed.</p>
+</body>
+
+</html>
