@@ -64,7 +64,58 @@
             }
 
             // Create an instance of the object type and throw it
-            throw new UserException("Value too high");
+            (function () {
+                try {
+                    throw new UserException('Value too high');
+                } catch (e) {
+                    console.error(e);
+                }
+            }());
+
+            console.log('finally block');
+
+            /*If the finally block returns a value, this value becomes the return value of the entire try-catch-finally production, regardless of any return statements in the try and catch blocks:*/
+            function f1() {
+                try {
+                    console.log(0);
+                    throw "bogus";
+                } catch (e) {
+                    console.log(1);
+                    return true; // this return statement is suspended
+                    // until finally block has completed
+                    console.log(2); // not reachable
+                } finally {
+                    console.log(3);
+                    return false; // overwrites the previous "return"
+                    console.log(4); // not reachable
+                }
+                // "return false" is executed now
+                console.log(5); // not reachable
+            }
+            f1(); // console 0, 1, 3; returns false
+
+            /*Overwriting of return values by the finally block also applies to exceptions thrown or re-thrown inside of the catch block:*/
+            function f2() {
+                try {
+                    throw "bogus";
+                } catch (e) {
+                    console.log('caught inner "bogus"');
+                    throw e; // this throw statement is suspended until
+                    // finally block has completed
+                } finally {
+                    return false; // overwrites the previous "throw"
+                }
+                // "return false" is executed now
+            }
+
+            try {
+                f2();
+            } catch (e) {
+                // this is never reached because the throw inside
+                // the catch is overwritten
+                // by the return in finally
+                console.log('caught outer "bogus"');
+            }
 
         }())
     </script>
@@ -91,8 +142,15 @@
     <h3>switch statement</h3>
     <p>A switch statement allows a program to evaluate an expression and attempt to match the expression's value to a case label. If a match is found, the program executes the associated statement.</p>
     <hr>
-    <h3>try...catch...finally statement</h3>
+    <h3>try...catch statement</h3>
     <p>The try...catch statement marks a block of statements to try, and specifies one or more responses should an exception be thrown. If an exception is thrown, the try...catch statement catches it.</p>
+    <hr>
+    <h3>finally block</h3>
+    <p>The finally block The finally block contains statements to execute after the try and catch blocks execute but before the statements following the try...catch statement. The finally block executes whether or not an exception is thrown. If an exception is thrown, the statements in the finally block execute even if no catch block handles the exception.</p>
+    <p>If the finally block returns a value, this value becomes the return value of the entire try-catch-finally production, regardless of any return statements in the try and catch blocks:
+
+    </p>
+    <p>Overwriting of return values by the finally block also applies to exceptions thrown or re-thrown inside of the catch block</p>
     <p>finally block is guaranteed to executed.</p>
 </body>
 
