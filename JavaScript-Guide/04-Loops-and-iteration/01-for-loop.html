@@ -4,13 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>for loop</title>
-    <script>
-        (function () {
-            for (var i = 0; i < 10; i++) {
-                console.log(i);
-            }
-        }())
-    </script>
+
 </head>
 
 <body>
@@ -26,7 +20,41 @@
         <li>The <code>statement</code> executes. To execute multiple statements, use a block statement (<code>{ ... }</code>) to group those statements.</li>
         <li>The update expression <code>incrementExpression</code>, if there is one, executes, and control returns to step 2.</li>
     </ol>
-    <h2>see console for result</h2>
+    <hr>
+    <h3>Example</h3>
+    <form name="selectForm">
+        <p>
+            <label for="musicTypes">Choose some music types, then click the button below:</label>
+            <br>
+            <select id="musicTypes" name="musicTypes" multiple="multiple">
+                <option selected="selected">R&B</option>
+                <option>Jazz</option>
+                <option>Blues</option>
+                <option>New Age</option>
+                <option>Classical</option>
+                <option>Opera</option>
+            </select>
+        </p>
+        <p>
+            <input id="btn" type="button" value="How many are selected?" />
+        </p>
+    </form>
 </body>
+<script>
+    function howMany(selectObject) {
+        var numberSelected = 0;
+        for (var i = 0; i < selectObject.options.length; i++) {
+            if (selectObject.options[i].selected) {
+                numberSelected++;
+            }
+        }
+        return numberSelected;
+    }
+
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function () {
+        alert('Number of options selected: ' + howMany(document.selectForm.musicTypes))
+    });
+</script>
 
 </html>
