@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>label statement</title>
+    <script>
+        /*The value of label may be any JavaScript identifier that is not a reserved word. The statement that you identify with a label may be any statement.*/
+        (function () {
+            var i = 0;
+            markLoop: while (i < 5) {
+                console.log('Value of i is: ', i);
+                i++;
+            }
+        }())
+    </script>
+</head>
+
+<body>
+    <h3>label statement</h3>
+    <p>A label provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and then use the break or continue statements to indicate whether a program should interrupt the loop or continue its execution.
+        <br> The syntax of the label statement looks like the following:</p>
+    <i>label : <br>
+   statement</i>
+</body>
+
+</html>
