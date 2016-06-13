@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>break statement</title>
+    <script>
+        (function () {
+            /* var a = [1,2,3,4];
+             for (var i = 0; i < a.length; i++) {
+                 console.log(i);
+                 if (a[i] == 3) {
+                     console.log('about to break;');
+                     break;
+                 };
+             }*/
+            var x = 0;
+            var z = 0;
+            labelCancelLoops: while (true) {
+                console.log("Outer loops: " + x);
+                x += 1;
+                z = 1;
+                while (true) {
+                    console.log("Inner loops: " + z);
+                    z += 1;
+                    if (z === 4 && x === 4) {
+                        break labelCancelLoops;
+                    } else if (z === 4) {
+                        break;
+                    }
+                }
+            }
+        }())
+    </script>
+</head>
+
+<body>
+    <h3>break statement</h3>
+    <p>Use the break statement to terminate a loop, switch, or in conjunction with a label statement.</p>
+    <ul>
+        <li>When you use <code>break</code> without a label, it terminates the innermost enclosing <code>while</code>, <code>do-while</code>, <code>for</code>, or <code>switch</code> immediately and transfers control to the following statement.</li>
+        <li>When you use <code>break</code> with a label, it terminates the specified labeled statement.</li>
+    </ul>
+    <br>
+    <p>The syntax of the break statement looks like this:
+        <br> break;
+        <br> break label;
+    </p>
+</body>
+
+</html>
