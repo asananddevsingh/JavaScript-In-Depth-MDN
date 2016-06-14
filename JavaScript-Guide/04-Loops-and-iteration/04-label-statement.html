@@ -9,12 +9,12 @@
         (function () {
             var i = 0;
             var j = 0;
-            stop: while (i < 5) {
+            start: while (i < 5) {
                 console.log('Value of i is: ', i);
-                start: while(j < 5){
+                stop: while(j < 5){
                     console.log('value of j: ', j);
                     if(j == 4)
-                        break stop;
+                        break start;
                     j++;
                 }
                 i++;
