@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>continue statement</title>
+    <script>
+        (function () {
+            var i = j = 0;
+            checkiandj: while (i < 4) {
+                console.log(i);
+                i += 1;
+                checkj:
+                    while (j > 4) {
+                        console.log(j);
+                        j -= 1;
+                        if ((j % 2) == 0) {
+                            continue checkj;
+                        }
+                        console.log(j + " is odd.");
+                    }
+                console.log("i = " + i);
+                console.log("j = " + j);
+            }
+        }())
+    </script>
+</head>
+
+<body>
+    <h3>continue statement</h3>
+    <p>The continue statement can be used to restart a while, do-while, for, or label statement.</p>
+    <ul>
+        <li>When you use <code>continue</code> without a label, it terminates the current iteration of the innermost enclosing <code>while</code>, <code>do-while</code>, or <code>for</code> statement and continues execution of the loop with the next iteration. In contrast to the <code>break</code> statement, <code>continue</code> does not terminate the execution of the loop entirely. In a <code>while</code> loop, it jumps back to the condition. In a <code>for</code> loop, it jumps to the <code>increment-expression</code>.</li>
+        <li>When you use <code>continue</code> with a label, it applies to the looping statement identified with that label.</li>
+    </ul>
+    <p>The syntax of the continue statement looks like the following:</p>
+    <ol>
+        <li><code>continue;</code></li>
+        <li><code>continue </code><em><code>label;</code></em></li>
+    </ol>
+</body>
+
+</html>
