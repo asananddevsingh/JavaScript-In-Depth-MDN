@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>for...in statement</title>
+    <script>
+        (function () {
+            var car = { make: 'ford', model:'mustgan'};
+            function dump_props(obj, obj_name) {
+                var result = "";
+                for (var i in obj) {
+                    result += obj_name + "." + i + " = " + obj[i] + "<br>";
+                }
+                result += "<hr>";
+                return result;
+            }
+            console.log(dump_props(car, 'car'));
+        }())
+    </script>
+</head>
+
+<body>
+    <h3>for...in statement</h3>
+    <p>The for...in statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements. A for...in statement looks as follows:</p>
+    <i><p>for (variable in object) {
+            <br> statements }
+        </p></i>
+</body>
+
+</html>
