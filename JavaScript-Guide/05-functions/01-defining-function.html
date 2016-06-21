@@ -4,6 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Defining function</title>
+    <script>
+        (function () {
+            function myFunc(theObject, num) {
+                theObject.make = "Toyota";
+                num = 201;
+            }
+
+            var mycar = {
+                make: "Honda",
+                model: "Accord",
+                year: 1998
+            };
+            var x, y, n;
+            n = 101;
+
+            x = mycar.make; // x gets the value "Honda"
+            console.log("Number value before function call: ", n);
+            console.log("Object value before function call: ", x);
+
+            myFunc(mycar);
+            y = mycar.make;
+            console.log("Number value after function call: ", n);
+            console.log("Object value after function call: ", y);
+        }())
+    </script>
 </head>
 
 <body>
