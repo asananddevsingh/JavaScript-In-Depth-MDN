@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Defining function</title>
 </head>
-<body>
 
+<body>
+    <h3>What is function ?</h3>
+    <p>Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure—a set of statements that performs a task or calculates a value. To use a function, you must define it somewhere in the scope from which you wish to call it.</p>
+    <h3>Defining functions</h3>
+    <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+    <ul>
+        <li> The name of the function.</li>
+        <li> A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+        <li> The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+    </ul>
+    <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.
+    </p>
+    <p>
+        If you pass an object (i.e. a non-primitive value, such as Array or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:</p>
+    <p>
+        function myFunc(theObject) {
+        <br> theObject.make = "Toyota";
+        <br> }
+        <br> var mycar = {make: "Honda", model: "Accord", year: 1998};
+        <br> var x, y;
+        <br> x = mycar.make; // x gets the value "Honda"
+        <br> myFunc(mycar);
+        <br> y = mycar.make; // y gets the value "Toyota"
+        <br> // (the make property was changed by the function)
+        <br>
+    </p>
 </body>
+
 </html>
