@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calling functions</title>
+    <script>
+        var square = function (number) {
+            return number * number
+        };
+
+        var x = square(5); // x gets the value 25
+        /*The preceding statement calls the function with an argument of 5. The function executes its statements and returns the value 25.*/
+
+        /*Functions must be in scope when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:*/
+
+        console.log(double(5));
+        /* ... */
+        function double(n) {
+            return 2 * n;
+        }
+
+        /*Note: This works only when defining the function using the above syntax (i.e. function funcName(){}). The code below will not work.*/
+        /*console.log(square(5));
+        square = function (n) {
+          return n * n;
+        }*/
+    </script>
+</head>
+
+<body>
+    <h3>Calling functions</h3>
+    <p>Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters.</p>
+</body>
+
+</html>
